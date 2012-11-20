@@ -1,0 +1,13 @@
+<f:debug>{mitarbeiter}</f:debug>
+		SSS
+<ul>
+<f:for each="{mitarbeiter}" as="person">
+	<li>{person.name}, <f:link.email email="{person.emailAdresse}">{person.emailAdresse}</f:link.email>
+		<ul>
+			<f:for each="{person.abteilung}" as="abteilung">
+				<li>{abteilung.titel}</li>
+			</f:for>
+		</ul>
+	</li>
+</f:for>
+</ul>
