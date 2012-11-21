@@ -1,0 +1,5 @@
+<ul>
+<f:for each="{abteilungen}" as="abteilung">
+	<li><f:link.action action="show" arguments="{abteilung: abteilung}">{abteilung.titel}</f:link.action></li>
+</f:for>
+</ul>

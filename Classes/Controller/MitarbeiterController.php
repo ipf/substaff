@@ -46,6 +46,7 @@ class Tx_Substaff_Controller_MitarbeiterController extends Tx_Extbase_MVC_Contro
 	 * List all mitarbeiter
 	 */
 	public function listAction() {
+		$this->flashMessageContainer->getAllMessagesAndFlush();
 		$mitarbeiter = $this->mitarbeiterRepository->findAll();
 		$this->view->assign('mitarbeiter', $mitarbeiter);
 	}
@@ -55,6 +56,22 @@ class Tx_Substaff_Controller_MitarbeiterController extends Tx_Extbase_MVC_Contro
 	 */
 	public function showAction(Tx_Substaff_Domain_Model_Mitarbeiter $mitarbeiter) {
 		$this->view->assign('mitarbeiter', $mitarbeiter);
+	}
+
+	/**
+	 * @param Tx_Substaff_Domain_Model_Mitarbeiter $mitarbeiter
+	 */
+	public function newAction(Tx_Substaff_Domain_Model_Mitarbeiter $mitarbeiter = NULL) {
+		$this->view->assign('mitarbeiter', $mitarbeiter);
+	}
+
+	/**
+	 * @param Tx_Substaff_Domain_Model_Mitarbeiter $mitarbeiter
+	 */
+	public function createAction(Tx_Substaff_Domain_Model_Mitarbeiter $mitarbeiter) {
+		$this->mitarbeiterRepository->add($mitarbeiter);
+		$this->flashMessageContainer->add('Erfolgreich ' . $mitarbeiter->getName() . ' hinzugefuegt');
+		$this->redirect('list');
 	}
 
 }

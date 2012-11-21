@@ -49,11 +49,11 @@ class Tx_Substaff_Controller_AbteilungController extends Tx_Extbase_MVC_Controll
 	protected $mitarbeiterRepository;
 
 	/**
-	 * List all abteilung
+	 * List all abteilungen
 	 */
 	public function listAction() {
-		$abteilung = $this->abteilungRepository->findAll();
-		$this->view->assign('abteilung', $abteilung);
+		$abteilungen = $this->abteilungRepository->findAll();
+		$this->view->assign('abteilung', $abteilungen);
 	}
 
 	/**
@@ -66,6 +66,18 @@ class Tx_Substaff_Controller_AbteilungController extends Tx_Extbase_MVC_Controll
 				->assign('abteilung', $abteilung)
 				->assign('mitarbeiter', $mitarbeiter)
 		;
+	}
+
+	public function newAction(Tx_Substaff_Domain_Model_Abteilung $abteilung = NULL) {
+		$this->view->assign('abteilung', $abteilung);
+	}
+
+	/**
+	 * @param Tx_Substaff_Domain_Model_Abteilung $abteilung
+	 */
+	public function createAction(Tx_Substaff_Domain_Model_Abteilung $abteilung) {
+		$this->abteilungRepository->add($abteilung);
+		$this->redirect('list');
 	}
 
 }
