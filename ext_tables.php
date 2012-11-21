@@ -41,7 +41,7 @@ $TCA['tx_substaff_domain_model_mitarbeiter'] = array(
 			'disabled' => 'hidden'
 		),
 		'dynamicConfigFile' => t3lib_extMgm::extPath($_EXTKEY) . 'Configuration/Tca/Mitarbeiter.php',
-		'iconfile' => t3lib_extMgm::extRelPath($_EXTKEY) . 'Resources/Public/Images/Mitarbeiter.png'
+		'iconfile' => t3lib_extMgm::extRelPath($_EXTKEY) . 'Resources/Public/Images/Mitarbeiter.gif'
 	)
 );
 
@@ -63,7 +63,7 @@ $TCA['tx_substaff_domain_model_abteilung'] = array(
 			'disabled' => 'hidden'
 		),
 		'dynamicConfigFile' => t3lib_extMgm::extPath($_EXTKEY) . 'Configuration/Tca/Abteilung.php',
-		'iconfile' => t3lib_extMgm::extRelPath($_EXTKEY) . 'Resources/Public/Images/Abteilung.png'
+		'iconfile' => t3lib_extMgm::extRelPath($_EXTKEY) . 'Resources/Public/Images/Abteilung.gif'
 	)
 );
 

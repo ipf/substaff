@@ -7,7 +7,7 @@ CREATE TABLE tx_substaff_domain_model_mitarbeiter (
 
 	name varchar(255) DEFAULT '' NOT NULL,
 	email_adresse varchar(255) DEFAULT '' NOT NULL,
-	bild blob,
+	bild varchar(255) DEFAULT '' NOT NULL,
 	abteilung text,
 
 	tstamp int(11) unsigned DEFAULT '0' NOT NULL,

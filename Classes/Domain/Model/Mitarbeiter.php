@@ -50,6 +50,25 @@ class Tx_Substaff_Domain_Model_Mitarbeiter extends Tx_Extbase_DomainObject_Abstr
 	protected $abteilung;
 
 	/**
+	 * @param string $bild
+	 */
+	public function setBild($bild) {
+		$this->bild = $bild;
+	}
+
+	/**
+	 * @return string
+	 */
+	public function getBild() {
+		return $this->bild;
+	}
+
+	/**
+	 * @var string
+	 */
+	protected $bild;
+
+	/**
 	 * Initialize defaults
 	 */
 	public function __construct() {
