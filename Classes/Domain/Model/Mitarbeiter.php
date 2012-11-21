@@ -78,6 +78,27 @@ class Tx_Substaff_Domain_Model_Mitarbeiter extends Tx_Extbase_DomainObject_Abstr
 	}
 
 	/**
+	 * Addsn a Abteilung
+	 *
+	 * @param Tx_Substaff_Domain_Model_Abteilung $abteilung
+	 * @return void
+	 */
+	public function addAbteilung(Tx_Substaff_Domain_Model_Abteilung $abteilung) {
+		$this->abteilung->attach($abteilung);
+	}
+
+	/**
+	 * Removes a Abteilung
+	 *
+	 * @param Tx_Substaff_Domain_Model_Abteilung $abteilungToRemove The Abteilung to be removed
+	 * @return void
+	 */
+	public function removeAbteilung(Tx_Substaff_Domain_Model_Abteilung $abteilungToRemove) {
+		$this->abteilung->detach($abteilungToRemove);
+	}
+	
+	
+	/**
 	 * @param string $emailAdresse
 	 */
 	public function setEmailAdresse($emailAdresse) {
