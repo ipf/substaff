@@ -1,16 +1,15 @@
  # Plugin configuration
 plugin.tx_substaff {
-	settings {
-	}
 	persistence {
 		storagePid = {$plugin.tx_substaff.persistence.storagePid}
-		classes {
-		}
 	}
 	view {
 		templateRootPath = {$plugin.tx_substaff.view.templateRootPath}
 		partialRootPath = {$plugin.tx_substaff.view.partialRootPath}
 		layoutRootPath = {$plugin.tx_substaff.view.layoutRootPath}
 		defaultPid = auto
+	}
+	features {
+		skipDefaultArguments = 1
 	}
 }

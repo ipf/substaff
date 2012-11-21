@@ -8,6 +8,12 @@ $TCA['tx_substaff_domain_model_abteilung'] = array(
 	'interface' => array(
 		'showRecordFieldList' => 'titel'
 	),
+	'types' => array(
+		'1' => array('showitem' => 'hidden, titel')
+	),
+	'palettes' => array(
+		'1' => array('showitem' => '')
+	),
 	'columns' => array(
 		'sys_language_uid' => Array (
 			'exclude' => 1,
@@ -66,10 +72,4 @@ $TCA['tx_substaff_domain_model_abteilung'] = array(
 			)
 		),
 	),
-	'types' => array(
-		'1' => array('showitem' => 'hidden, titel')
-	),
-	'palettes' => array(
-		'1' => array('showitem' => '')
-	)
 );

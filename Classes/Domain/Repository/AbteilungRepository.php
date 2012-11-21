@@ -26,35 +26,9 @@
  * ************************************************************* */
 
 /**
- * MitarbeiterController
+ * Repository for Abteilung
+ *
  */
-class Tx_Substaff_Controller_MitarbeiterController extends Tx_Extbase_MVC_Controller_ActionController {
-
-	/**
-	 * @var Tx_Substaff_Domain_Repository_MitarbeiterRepository
-	 * @inject
-	 */
-	protected $mitarbeiterRepository;
-
-	/**
-	 * @var Tx_Substaff_Domain_Model_Mitarbeiter
-	 * @inject
-	 */
-	protected $mitarbeiter;
-
-	/**
-	 * List all mitarbeiter
-	 */
-	public function listAction() {
-		$mitarbeiter = $this->mitarbeiterRepository->findAll();
-		$this->view->assign('mitarbeiter', $mitarbeiter);
-	}
-
-	/**
-	 * @param Tx_Substaff_Domain_Model_Mitarbeiter $mitarbeiter
-	 */
-	public function showAction(Tx_Substaff_Domain_Model_Mitarbeiter $mitarbeiter) {
-		$this->view->assign('mitarbeiter', $mitarbeiter);
-	}
+class Tx_Substaff_Domain_Repository_AbteilungRepository extends Tx_Extbase_Persistence_Repository {
 
 }

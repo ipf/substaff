@@ -3,11 +3,11 @@ plugin.tx_substaff {
 	}
 	view {
 		 # cat=plugin.tx_substaff/file; type=string; label=Path to template root (FE)
-		templateRootPath = EXT:tx_substaff/Resources/Private/Templates/
+		templateRootPath = EXT:substaff/Resources/Private/Templates/
 		 # cat=plugin.tx_substaff/file; type=string; label=Path to template partials (FE)
-		partialRootPath = EXT:tx_substaff/Resources/Private/Partials/
+		partialRootPath = EXT:substaff/Resources/Private/Partials/
 		 # cat=plugin.tx_substaff/file; type=string; label=Path to template layouts (FE)
-		layoutRootPath = EXT:tx_substaff/Resources/Private/Layouts/
+		layoutRootPath = EXT:substaff/Resources/Private/Layouts/
 	}
 	persistence {
 		 # cat=plugin.tx_substaff//a; type=int+; label=Default storage PID

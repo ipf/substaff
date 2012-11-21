@@ -18,5 +18,3 @@ Tx_Extbase_Utility_Extension::configurePlugin(
 		'Mitarbeiter' => 'show', // The first controller and its first action will be the default
 	)
 );
-
-?>
