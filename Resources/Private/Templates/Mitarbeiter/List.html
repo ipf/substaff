@@ -1,14 +1,5 @@
-<f:for each="{mitarbeiter}" as="person">
-	<h2>{person.name}</h2>
-		<p><f:link.email email="{person.emailAdresse}">{person.emailAdresse}</f:link.email></p>
-		<br />
-		<f:image src="uploads/pics/{person.bild}" alt="" width="150" />
-		<h3>Abteilung</h3>
-		<ul>
-			<f:for each="{person.abteilung}" as="abteilung">
-				<li><f:link.action action=""{abteilung.titel}</li>
-			</f:for>
-		</ul>
-	</li>
-</f:for>
+<ul>
+	<f:for each="{mitarbeiter}" as="person">
+		<li><f:link.action action="show" arguments="{mitarbeiter: person}">{person.name}</f:link.action></li>
+	</f:for>
 </ul>

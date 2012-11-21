@@ -43,6 +43,12 @@ class Tx_Substaff_Controller_AbteilungController extends Tx_Extbase_MVC_Controll
 	protected $abteilung;
 
 	/**
+	 * @var Tx_Substaff_Domain_Repository_MitarbeiterRepository
+	 * @inject
+	 */
+	protected $mitarbeiterRepository;
+
+	/**
 	 * List all abteilung
 	 */
 	public function listAction() {
@@ -54,7 +60,12 @@ class Tx_Substaff_Controller_AbteilungController extends Tx_Extbase_MVC_Controll
 	 * @param Tx_Substaff_Domain_Model_Abteilung $abteilung
 	 */
 	public function showAction(Tx_Substaff_Domain_Model_Abteilung $abteilung) {
-		$this->view->assign('abteilung', $abteilung);
+		$mitarbeiter = $this->mitarbeiterRepository->findByAbteilung($abteilung);
+
+		$this->view
+				->assign('abteilung', $abteilung)
+				->assign('mitarbeiter', $mitarbeiter)
+		;
 	}
 
 }

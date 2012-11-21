@@ -1,0 +1,7 @@
+<h2 xmlns:f="http://www.w3.org/1999/html">{abteilung.titel}</h2>
+
+<h3>Mitarbeiter</h3>
+
+<f:for each="{mitarbeiter}" as="person">
+	<f:link.action action="show" controller="Mitarbeiter" pluginName="Mitarbeiterdetail" arguments="{mitarbeiter: person}">{person.name}</f:link.action>
+</f:for>

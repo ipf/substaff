@@ -1,0 +1,11 @@
+<h2>{mitarbeiter.name}</h2>
+		<p><f:link.email email="{mitarbeiter.emailAdresse}">{mitarbeiter.emailAdresse}</f:link.email></p>
+		<br />
+		<f:image src="uploads/pics/{mitarbeiter.bild}" alt="" width="150" />
+		<h3>Abteilung</h3>
+		<ul>
+			<f:for each="{mitarbeiter.abteilung}" as="abteilung">
+				<li><f:link.action action="show" controller="Abteilung" pluginName="AbteilungDetail" arguments="{abteilung: abteilung}">{abteilung.titel}</f:link.action></li>
+			</f:for>
+		</ul>
+	</li>
